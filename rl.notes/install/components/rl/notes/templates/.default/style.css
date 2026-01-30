@@ -1,0 +1,153 @@
+#notes-app {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+#notes_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note_item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note_item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.note_title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.note_text {
+  line-height: 1.5;
+  white-space: pre-line; /* сохраняет переносы строк */
+}
+
+.note_card {
+    width: 100%;
+    display: flex;
+}
+.note_content {flex-grow: 1;}
+.note_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 40px;
+  flex-grow: 0;
+}
+
+.note_actions button {
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.note_actions button:hover {
+  background-color: #e0e6f0;
+}
+
+.note_actions svg {
+  width: 18px;
+  height: 18px;
+  fill: #555;
+}
+
+.note_edit {width: 100%;}
+.note_edit input, .note_edit textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+}
+.note_edit input:focus, .note_edit textarea:focus {
+  border-color: #007BFF;
+}
+.note_edit button {
+    background-color: #6c6c6c;
+    color: #fff;
+    border: none;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.note_edit button.note_save {
+    background-color: #007BFF;
+    margin-right: 20px;
+}
+.note_edit button:hover {
+    background-color: #0056b3;
+}
+
+#new_note_form {
+    background-color: #e1e1e1;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+#new_note_form input, #new_note_form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+}
+
+#new_note_form input:focus, #new_note_form textarea:focus {
+  border-color: #007BFF;
+}
+#new_note_form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+    margin-left: auto;
+}
+#new_note_form button:hover {
+    background-color: #0056b3;
+}
